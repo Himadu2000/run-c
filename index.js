@@ -9,6 +9,7 @@ const job = new CronJob(
       job.lastDate()?.getMinutes() === 50
     ) {
       console.log("last 10");
+      exec("node ms.js");
     }
     console.log("Running every minute.");
     exec("yarn start");
