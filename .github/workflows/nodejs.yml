@@ -42,7 +42,7 @@ jobs:
         run: yarn
 
       - name: Run
-        run: node main.js
+        run: node ms.js
         env: # Or as an environment variable
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           URL: ${{ secrets.URL }}
