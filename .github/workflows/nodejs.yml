@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron: "0 3 * * 1-5"
+  # schedule:
+  #   # * is a special character in YAML so you have to quote this string
+  #   - cron: "0 3 * * 1-5"
 
 jobs:
   build:
@@ -42,7 +42,7 @@ jobs:
         run: yarn
 
       - name: Run
-        run: node index.js
+        run: node main.js
         env: # Or as an environment variable
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           URL: ${{ secrets.URL }}

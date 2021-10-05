@@ -12,7 +12,7 @@ const job = new CronJob(
       exec("node ms.js");
     }
     console.log("Running every minute.");
-    exec("yarn start");
+    exec("node main.js");
   },
   null,
   true,
